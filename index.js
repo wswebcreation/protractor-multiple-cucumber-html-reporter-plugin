@@ -39,7 +39,16 @@ const PLUGIN_CONFIG = {
 function setup() {
     return browser.getProcessedConfig()
         .then((configuration) => {
-            IS_JSON_FORMAT = configuration.cucumberOpts.format && configuration.cucumberOpts.format.includes('json');
+            let cucumberFormat = configuration.cucumberOpts.format;
+
+            IS_JSON_FORMAT = cucumberFormat && cucumberFormat.includes('json');
+
+            if (Array.isArray(cucumberFormat)) {
+                IS_JSON_FORMAT = cucumberFormat.find((format) => {
+                    cucumberFormat = format;
+                    return format.includes('json')
+                });
+            }
 
             if (IS_JSON_FORMAT) {
                 /**
@@ -52,7 +61,7 @@ function setup() {
                 /**
                  * Get the JSON folder path and file name if they are still empty
                  */
-                const formatPathMatch = configuration.cucumberOpts.format.match(/(.+):(.+)/);
+                const formatPathMatch = cucumberFormat.match(/(.+):(.+)/);
                 const filePathMatch = formatPathMatch[2].match(/(.*)\/(.*)\.json/);
 
                 // Get the cucumber results path
