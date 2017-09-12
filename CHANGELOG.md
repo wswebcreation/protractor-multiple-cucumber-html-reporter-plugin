@@ -2,7 +2,7 @@
 
 
 <a name="1.1.0"></a>
-## [1.1.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.1.0...v1.1.0) (2017-09-12)
+## [1.1.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.0.2...v1.1.0) (2017-09-12)
 
 ### Features
 
