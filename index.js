@@ -7,6 +7,7 @@ const multiCucumberHTLMReporter = require('multiple-cucumber-html-reporter');
 let IS_JSON_FORMAT = false;
 let PID_INSTANCE_DATA;
 const REPORT_FOLDER = 'report';
+const METADATA_KEY = 'metadata';
 const JSON_OUTPUT_FOLDER = 'json-output-folder';
 const PLUGIN_CONFIG = {
     /**
@@ -22,6 +23,7 @@ const PLUGIN_CONFIG = {
     automaticallyGenerateReport: false,
     removeExistingJsonReportFile: false,
     removeOriginalJsonReportFile: false,
+    metadataKey: METADATA_KEY,
 
     /**
      * Used for both modules
@@ -102,7 +104,7 @@ function setup() {
 
                 PID_INSTANCE_DATA = {
                     pid: process.pid,
-                    metadata: Object.assign(metadata, configuration.capabilities.metadata || {})
+                    metadata: Object.assign(metadata, configuration.capabilities[PLUGIN_CONFIG.metadataKey] || {})
                 };
 
                 /**

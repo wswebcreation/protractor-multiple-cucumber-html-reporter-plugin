@@ -1,6 +1,14 @@
 # Changelog
 
 
+<a name="1.1.0"></a>
+## [1.1.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.1.0...v1.1.0) (2017-09-12)
+
+### Features
+
+* **feature:** Add an optional `metadataKey` option that can copy a different dataobject from the `capabilities` / `multiCapabilities` to the metadata of the report
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.0.1...v1.0.2) (2017-09-11)
 

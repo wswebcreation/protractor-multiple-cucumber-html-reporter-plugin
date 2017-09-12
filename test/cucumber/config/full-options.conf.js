@@ -8,7 +8,7 @@ config.multiCapabilities = [{
     chromeOptions: {
         args: ['disable-infobars']
     },
-    metadata: {
+    deviceProperties: {
         browser: {
             name: 'chrome',
             version: 'latest'
@@ -26,6 +26,7 @@ config.plugins = [{
     options: {
         automaticallyGenerateReport: true,
         jsonOutputPath: './json-output-path/',
+        metadataKey: 'deviceProperties',
         reportPath: './report-path/',
         removeExistingJsonReportFile: true,
         removeOriginalJsonReportFile: true,

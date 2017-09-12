@@ -115,6 +115,15 @@ The directory that will hold all the unique generated JSON files, relative from 
 
 If you **DON'T** provide this it will generate a `json-output-folder`-folder in the `path` that it defined the `cucumberOpts.format`.
 
+### `metadataKey`
+- **Type:** `string`
+- **Default:** `metadata`
+- **Mandatory:** No
+
+This will be the `key` reference in the `capabilities` or `multiCapabilities` that will refer to where the instance specific data is saved. The metadata is used for the report that will be generated, see also [metadata](#metadata).
+
+If for example all the metadata is already present in the `capabilities` but with the `key` called `deviceProperties` you can add the option `metadataKey: 'deviceProperties'` and the plugin will automatically copy the `deviceProperties`-object to the `metadata` of the report.
+
 ### `openReportInBrowser`
 - **Type:** `boolean`
 - **Default:** `false`
