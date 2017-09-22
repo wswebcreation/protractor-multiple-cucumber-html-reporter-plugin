@@ -1,6 +1,18 @@
 # Changelog
 
 
+<a name="1.2.0"></a>
+## [1.2.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.1.0...v1.2.0) (2017-09-22)
+
+### Features
+
+* **feature:** Add an optional `disableLog` option to pass to the report module to disbale the log when a report has been generated
+
+### Bug Fixes
+
+* **fix:** `removeExistingJsonReportFile: true` removed previous files to eager. They are now saved with browser and plaform name.
+
+
 <a name="1.1.0"></a>
 ## [1.1.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.0.2...v1.1.0) (2017-09-12)
 

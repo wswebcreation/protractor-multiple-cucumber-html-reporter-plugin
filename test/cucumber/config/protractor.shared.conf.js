@@ -14,14 +14,5 @@ exports.config = {
 
     specs: [
         path.resolve(process.cwd(), './test/cucumber/**/*.feature')
-    ],
-
-    capabilities: {
-        browserName: 'chrome',
-        shardTestFiles: false,
-        maxInstances: 2,
-        chromeOptions: {
-            args: ['disable-infobars']
-        }
-    }
+    ]
 };

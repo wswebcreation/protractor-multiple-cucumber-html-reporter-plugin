@@ -115,6 +115,21 @@ The directory that will hold all the unique generated JSON files, relative from 
 
 If you **DON'T** provide this it will generate a `json-output-folder`-folder in the `path` that it defined the `cucumberOpts.format`.
 
+### `disableLog`
+- **Type:** `boolean`
+- **Mandatory:** No
+- **Default:** `false`
+
+This will disable the log so will **NOT** see this.
+
+```shell
+=====================================================================================
+    Multiple Cucumber HTML report generated in:
+
+    /Users/wswebcreation/multiple-cucumber-html-reporter/.tmp/index.html
+========================================================================
+```
+
 ### `metadataKey`
 - **Type:** `string`
 - **Default:** `metadata`

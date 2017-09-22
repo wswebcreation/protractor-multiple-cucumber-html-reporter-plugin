@@ -58,7 +58,7 @@ describe('validate plugin and all the options', () => {
     it('should validate all options and output', () => {
         const cmd = 'test/cucumber/config/full-options.conf.js';
         const jsonOutputPath = path.resolve(process.cwd(), './json-output-path');
-        const dummyJson = path.resolve(jsonOutputPath, 'foo_until_you_bar.chrome_1234567890123.json');
+        const dummyJson = path.resolve(jsonOutputPath, 'foo_until_you_bar.chrome.osx_1234567890123.json');
         const reportPath = path.resolve(process.cwd(), './report-path');
 
         // Clear the state
@@ -118,6 +118,15 @@ describe('validate plugin and all the options', () => {
                 expect(fs.existsSync(reportMergedJonOutput)).toEqual(true);
                 expect(fs.existsSync(reportEnrichedJsonOutput)).toEqual(true);
             })
+            .run();
+    });
+
+    it('should not print the log', () => {
+        const cmd = 'test/cucumber/config/no-log.conf.js';
+
+        return util
+            .runOne(cmd)
+            .expectOutput('Running 1 instances of WebDriver')
             .run();
     });
 });

@@ -116,20 +116,6 @@
     "no-labels": 2,
     "no-lone-blocks": 2,
     "no-loop-func": 2,
-    "no-magic-numbers": [
-      "error",
-      {
-        "ignore": [
-          0,
-          -1,
-          1,
-          2,
-          8000,
-          9000
-        ],
-        "ignoreArrayIndexes": true
-      }
-    ],
     "no-multi-spaces": 2,
     "no-multi-str": 0,
     "no-native-reassign": 2,

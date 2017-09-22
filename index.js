@@ -13,6 +13,7 @@ const PLUGIN_CONFIG = {
     /**
      * multiple-cucumber-html-reporter specific options
      */
+    disableLog: false,
     openReportInBrowser: false,
     reportPath: REPORT_FOLDER,
     saveCollectedJSON: false,
@@ -162,16 +163,16 @@ function postResults() {
 
             currentReport.map((singleReport) => {
                 const featureName = singleReport.name.replace(/\s+/g, '_').replace(/\W/g, '').toLowerCase() || 'noName';
-                const filePath = path.join(PLUGIN_CONFIG.jsonOutputPath,
-                    `${featureName}.${PID_INSTANCE_DATA.metadata.browser.name}_${Date.now()}.json`
-                );
+                const plaformName = PID_INSTANCE_DATA.metadata.platform.name === '' ? '' : `.${PID_INSTANCE_DATA.metadata.platform.name}`;
+                const fileName = `${featureName}.${PID_INSTANCE_DATA.metadata.browser.name}${plaformName}`;
+                const filePath = path.join(PLUGIN_CONFIG.jsonOutputPath, `${fileName}_${Date.now()}.json`);
 
                 /**
                  * If needed remove the previous file if it exists to prevent double reports of 1 feature + browser execution
                  */
                 if (PLUGIN_CONFIG.removeExistingJsonReportFile) {
                     fs.readdirSync(PLUGIN_CONFIG.jsonOutputPath)
-                        .filter((file) => file.match(new RegExp(`${featureName}.${PID_INSTANCE_DATA.metadata.browser.name}`, 'ig')))
+                        .filter((file) => file.match(new RegExp(fileName, 'ig')))
                         .forEach((file) => fs.removeSync(path.resolve(PLUGIN_CONFIG.jsonOutputPath, file)));
                 }
 
@@ -206,6 +207,7 @@ function postResults() {
                 }
 
                 multiCucumberHTLMReporter.generate({
+                    disableLog: PLUGIN_CONFIG.disableLog,
                     jsonDir: PLUGIN_CONFIG.jsonOutputPath,
                     openReportInBrowser: PLUGIN_CONFIG.openReportInBrowser,
                     reportPath: PLUGIN_CONFIG.reportPath,
