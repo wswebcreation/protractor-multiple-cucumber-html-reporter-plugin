@@ -170,8 +170,6 @@ function postResults() {
                     ? ''
                     : `.${PID_INSTANCE_DATA.metadata.platform.version}`;
                 const fileName = `${featureName}.${PID_INSTANCE_DATA.metadata.browser.name}${plaformName}${plaformVersion}`;
-
-                console.log('fileName = ', fileName)
                 const filePath = path.join(PLUGIN_CONFIG.jsonOutputPath, `${fileName}_${Date.now()}.json`);
 
                 /**
