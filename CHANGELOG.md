@@ -1,6 +1,14 @@
 # Changelog
 
 
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.2.0...v1.2.1) (2017-09-28)
+
+### Bug Fixes
+
+* **fix:** Fix on the fix of version 1.2.0 for `removeExistingJsonReportFile: true` based on issue [2](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/issues/2) They are now saved with browser + plaform name + plaftform version.
+
+
 <a name="1.2.0"></a>
 ## [1.2.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.1.0...v1.2.0) (2017-09-22)
 
