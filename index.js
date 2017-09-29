@@ -163,13 +163,18 @@ function postResults() {
 
             currentReport.map((singleReport) => {
                 const featureName = singleReport.name.replace(/\s+/g, '_').replace(/\W/g, '').toLowerCase() || 'noName';
+                const browserVersion = PID_INSTANCE_DATA.metadata.browser.version === ''
+                    ? ''
+                    : `.${PID_INSTANCE_DATA.metadata.browser.version}`;
                 const plaformName = PID_INSTANCE_DATA.metadata.platform.name === ''
                     ? ''
                     : `.${PID_INSTANCE_DATA.metadata.platform.name}`;
                 const plaformVersion = PID_INSTANCE_DATA.metadata.platform.version === ''
                     ? ''
                     : `.${PID_INSTANCE_DATA.metadata.platform.version}`;
-                const fileName = `${featureName}.${PID_INSTANCE_DATA.metadata.browser.name}${plaformName}${plaformVersion}`;
+                let fileName = `${featureName}.${PID_INSTANCE_DATA.metadata.browser.name}`;
+
+                fileName += browserVersion + plaformName + plaformVersion;
                 const filePath = path.join(PLUGIN_CONFIG.jsonOutputPath, `${fileName}_${Date.now()}.json`);
 
                 /**

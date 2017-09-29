@@ -58,18 +58,11 @@ describe('validate plugin and all the options', () => {
     it('should validate all options and output', () => {
         const cmd = 'test/cucumber/config/full-options.conf.js';
         const jsonOutputPath = path.resolve(process.cwd(), './json-output-path');
-        const dummyJson = path.resolve(jsonOutputPath, 'foo_until_you_bar.chrome.osx.10.12.6_1234567890123.json');
         const reportPath = path.resolve(process.cwd(), './report-path');
 
         // Clear the state
         fs.removeSync(jsonOutputPath);
         fs.removeSync(reportPath);
-
-        // Create an extra file that should be removed by `removeExistingJsonReportFile: true`
-        fs.mkdirsSync(jsonOutputPath);
-        fs.writeJsonSync(dummyJson, { name: 'dummy' });
-        expect(fs.existsSync(dummyJson)).toEqual(true);
-
 
         return util
             .runOne(cmd)
@@ -91,8 +84,6 @@ describe('validate plugin and all the options', () => {
 
                 // Check if the jsonOutputPath has been changed => `jsonOutputPath: './json-output-path/'`
                 expect(fooResults).toContain(`${cucumberFoo}.${BROWSER_NAME}`);
-                // Check if a previous file is removed by `removeExistingJsonReportFile: true`
-                expect(fs.existsSync(dummyJson)).toEqual(false);
 
                 // Check all metadata has been added from the capability
                 expect(fooJson[0].metadata.browser.name).toEqual(BROWSER_NAME);
