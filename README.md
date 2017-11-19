@@ -4,6 +4,8 @@
 [![npm version](https://img.shields.io/npm/v/protractor-multiple-cucumber-html-reporter-plugin.svg)](https://www.npmjs.com/package/protractor-multiple-cucumber-html-reporter-plugin)
 [![NPM License](https://img.shields.io/npm/l/protractor-multiple-cucumber-html-reporter-plugin.svg)](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/blob/master/LICENSE)
 
+[![NPM](https://nodei.co/npm/protractor-multiple-cucumber-html-reporter-plugin.png)](https://nodei.co/npm/protractor-multiple-cucumber-html-reporter-plugin/)
+
 This plugin will connect [Protractor](https://www.npmjs.com/package/protractor), [CucumberJS](https://www.npmjs.com/package/cucumber) and [protractor-cucumber-framework](https://www.npmjs.com/package/protractor-cucumber-framework) to generate unique JSON files per feature with only a few lines of code.
 It will also replace the extra CucumberJS hook you needed to make in CucumberJS 1 and 2 to generate unique JSON report files.
 
