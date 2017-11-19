@@ -30,7 +30,15 @@ config.plugins = [{
         reportPath: './report-path/',
         removeExistingJsonReportFile: true,
         removeOriginalJsonReportFile: true,
-        saveCollectedJSON: true
+        saveCollectedJSON: true,
+        reportName: 'You can adjust this report name',
+        customData: {
+            title: 'Run info',
+            data: [
+                { label: 'Project', value: 'Custom project' },
+                { label: 'Release', value: '1.2.3' }
+            ]
+        }
     }
 }];
 

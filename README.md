@@ -97,12 +97,29 @@ Setting this option will autimatically generate a new report with `multiple-cucu
     Multiple Cucumber HTML report generated in:
 
     /Users/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/.tmp/report/index.html
-
-    Tnx for using Multiple Cucumber HTML report
-
-    Grtz wswebcreation
 =====================================================================================================
 ```
+
+### `customData`
+- **Type:** `object`
+- **Mandatory:** No
+
+You can add a custom data block to the report like this
+
+```js
+customData: {
+    title: 'Run info',
+    data: [
+        {label: 'Project', value: 'Custom project'},
+        {label: 'Release', value: '1.2.3'},
+        {label: 'Cycle', value: 'B11221.34321'},
+        {label: 'Execution Start Time', value: 'Nov 19th 2017, 02:31 PM EST'},
+        {label: 'Execution End Time', value: 'Nov 19th 2017, 02:56 PM EST'}
+    ]
+}
+```
+
+> **THIS WILL ONLY WORK WITH `automaticallyGenerateReport:true`. IF YOU GENERATE THE REPORT LATER PLEASE LOOK AT [multiple-cucumber-html-reporter](https://github.com/wswebcreation/multiple-cucumber-html-reporter#usage)**
 
 ### `jsonOutputPath`
 - **Type:** `string`
@@ -123,11 +140,11 @@ If you **DON'T** provide this it will generate a `json-output-folder`-folder in 
 This will disable the log so will **NOT** see this.
 
 ```shell
-=====================================================================================
+=====================================================================================================
     Multiple Cucumber HTML report generated in:
 
-    /Users/wswebcreation/multiple-cucumber-html-reporter/.tmp/index.html
-========================================================================
+    /Users/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/.tmp/report/index.html
+=====================================================================================================
 ```
 
 ### `metadataKey`
@@ -159,6 +176,14 @@ Settign this option will remove the previous unique JSON report file if it exist
 - **Mandatory:** No
 
 Setting this option will remove the original json report file, defined in the `cucumberOpts.format`. It will clean up the folder where you save all your results and may be needed if you have a lot of JSON-files with screenshots in it.
+
+### `reportName`
+- **Type:** `string`
+- **Mandatory:** No
+
+You can change the report name to a name you want.
+
+> **THIS WILL ONLY WORK WITH `automaticallyGenerateReport:true`. IF YOU GENERATE THE REPORT LATER PLEASE LOOK AT [multiple-cucumber-html-reporter](https://github.com/wswebcreation/multiple-cucumber-html-reporter#usage)**
 
 ### `reportPath`
 - **Type:** `string`

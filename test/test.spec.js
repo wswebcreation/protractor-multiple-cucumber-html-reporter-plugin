@@ -55,7 +55,7 @@ describe('validate plugin and all the options', () => {
             .run();
     });
 
-    it('should validate all options and output', () => {
+    fit('should validate all options and output', () => {
         const cmd = 'test/cucumber/config/full-options.conf.js';
         const jsonOutputPath = path.resolve(process.cwd(), './json-output-path');
         const reportPath = path.resolve(process.cwd(), './report-path');
@@ -78,6 +78,7 @@ describe('validate plugin and all the options', () => {
                 const report = path.resolve(`${reportPath}/index.html`);
                 const reportMergedJonOutput = path.resolve(`${reportPath}/merged-output.json`);
                 const reportEnrichedJsonOutput = path.resolve(`${reportPath}/enriched-output.json`);
+                const reportEnrichedJson = fs.readJsonSync(reportEnrichedJsonOutput);
 
                 // Check original JSON has been removed => `removeOriginalJsonReportFile = true`
                 expect(cucumberResults).not.toBeDefined();
@@ -108,6 +109,15 @@ describe('validate plugin and all the options', () => {
                 // Merged and enriched file has been saved => `saveCollectedJSON: true`
                 expect(fs.existsSync(reportMergedJonOutput)).toEqual(true);
                 expect(fs.existsSync(reportEnrichedJsonOutput)).toEqual(true);
+
+                // Check that the report name has been added to the enriched file
+                expect(reportEnrichedJson.reportName).toEqual('You can adjust this report name');
+                expect(reportEnrichedJson.customData.title).toEqual('Run info');
+                expect(reportEnrichedJson.customData.data).toEqual([
+                    { label: 'Project', value: 'Custom project' },
+                    { label: 'Release', value: '1.2.3' }
+                ]);
+
             })
             .run();
     });

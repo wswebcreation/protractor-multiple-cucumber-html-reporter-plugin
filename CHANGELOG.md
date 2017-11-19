@@ -1,6 +1,14 @@
 # Changelog
 
 
+<a name="1.3.0"></a>
+## [1.3.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.2.5...v1.3.0) (2017-11-19)
+
+### Features
+
+* **feature:** add the possibility to add a custom datablock to the features overview
+
+
 <a name="1.2.5"></a>
 ## [1.2.5](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.2.4...v1.2.5) (2017-11-13)
 

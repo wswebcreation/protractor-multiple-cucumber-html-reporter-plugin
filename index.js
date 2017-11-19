@@ -204,6 +204,16 @@ function postResults() {
                 fs.removeSync(currentReportPath);
             }
 
+            if ((PLUGIN_CONFIG.customData || PLUGIN_CONFIG.reportName) && !PLUGIN_CONFIG.automaticallyGenerateReport) {
+                console.warn(`
+===========================================================================
+    YOU ADDED A CUSTOM reportName AND OR ADDED A cucsomerData-object
+    WITHOUT SETTING 'automaticallyGenerateReport: true'.
+    
+    !!!THIS WILL NOT RESULT IN SETTING THE CUSTOM DATA IN THE REPORT!!!                
+===========================================================================`);
+            }
+
             /**
              * Generate the HTML report if needed
              */
@@ -216,13 +226,29 @@ function postResults() {
                     PLUGIN_CONFIG.reportPath = path.join(PLUGIN_CONFIG.cucumberResultsPath, REPORT_FOLDER);
                 }
 
-                multiCucumberHTLMReporter.generate({
+                const multiCucumberHTLMReporterConfig = {
                     disableLog: PLUGIN_CONFIG.disableLog,
                     jsonDir: PLUGIN_CONFIG.jsonOutputPath,
                     openReportInBrowser: PLUGIN_CONFIG.openReportInBrowser,
                     reportPath: PLUGIN_CONFIG.reportPath,
                     saveCollectedJSON: PLUGIN_CONFIG.saveCollectedJSON
-                });
+                };
+
+                /**
+                 * Add the custom report name if needed
+                 */
+                if (PLUGIN_CONFIG.reportName) {
+                    multiCucumberHTLMReporterConfig.reportName = PLUGIN_CONFIG.reportName;
+                }
+
+                /**
+                 * Add the custom data if needed
+                 */
+                if (PLUGIN_CONFIG.customData) {
+                    multiCucumberHTLMReporterConfig.customData = PLUGIN_CONFIG.customData;
+                }
+
+                multiCucumberHTLMReporter.generate(multiCucumberHTLMReporterConfig);
             }
         } else {
             console.warn(`\n### File: '${reportPath}' or '${pidReportPath}' is not present! ###\n`);
