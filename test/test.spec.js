@@ -53,9 +53,9 @@ describe('validate plugin and all the options', () => {
                 expect(generateJson[0].metadata.platform.version).toEqual('');
             })
             .run();
-    });
+    }, 11000);
 
-    fit('should validate all options and output', () => {
+    it('should validate all options and output', () => {
         const cmd = 'test/cucumber/config/full-options.conf.js';
         const jsonOutputPath = path.resolve(process.cwd(), './json-output-path');
         const reportPath = path.resolve(process.cwd(), './report-path');
@@ -120,7 +120,7 @@ describe('validate plugin and all the options', () => {
 
             })
             .run();
-    });
+    }, 11000);
 
     it('should not print the log', () => {
         const cmd = 'test/cucumber/config/no-log.conf.js';
@@ -129,5 +129,5 @@ describe('validate plugin and all the options', () => {
             .runOne(cmd)
             .expectOutput('Running 1 instances of WebDriver')
             .run();
-    });
+    }, 11000);
 });
