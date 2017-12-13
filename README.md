@@ -1,6 +1,6 @@
 # protractor-multiple-cucumber-html-reporter-plugin
 
-[![Build Status](https://travis-ci.org/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin.svg?branch=master)](https://travis-ci.org/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin)
+[![Join the chat at https://gitter.im/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin](https://badges.gitter.im/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin.svg)](https://gitter.im/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)[![Build Status](https://travis-ci.org/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin.svg?branch=master)](https://travis-ci.org/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin)
 [![npm version](https://img.shields.io/npm/v/protractor-multiple-cucumber-html-reporter-plugin.svg)](https://www.npmjs.com/package/protractor-multiple-cucumber-html-reporter-plugin)
 [![NPM License](https://img.shields.io/npm/l/protractor-multiple-cucumber-html-reporter-plugin.svg)](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/blob/master/LICENSE)
 
