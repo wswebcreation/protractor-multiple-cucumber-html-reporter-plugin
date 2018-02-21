@@ -38,7 +38,8 @@ config.plugins = [{
                 { label: 'Project', value: 'Custom project' },
                 { label: 'Release', value: '1.2.3' }
             ]
-        }
+        },
+        displayDuration: true
     }
 }];
 
