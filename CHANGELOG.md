@@ -1,6 +1,15 @@
 # Changelog
 
 
+<a name="1.4.0"></a>
+## [1.4.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.3.0...v1.4.0) (2018-02-21)
+
+### Features
+
+* **feature:** add `displayDuration` option
+
+
+
 <a name="1.3.0"></a>
 ## [1.3.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.2.5...v1.3.0) (2017-11-19)
 
