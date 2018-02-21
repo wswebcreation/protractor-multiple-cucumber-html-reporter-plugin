@@ -1,0 +1,7 @@
+.idea/
+.tmp/
+coverage/
+node_modules/
+reports/
+report-path/
+json-output-path/

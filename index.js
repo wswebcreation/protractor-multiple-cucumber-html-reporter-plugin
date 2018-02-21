@@ -10,6 +10,7 @@ const REPORT_FOLDER = 'report';
 const METADATA_KEY = 'metadata';
 const JSON_OUTPUT_FOLDER = 'json-output-folder';
 const PLUGIN_CONFIG = {
+    displayDuration: false,
     /**
      * multiple-cucumber-html-reporter specific options
      */
@@ -227,6 +228,7 @@ function postResults() {
                 }
 
                 const multiCucumberHTLMReporterConfig = {
+                    displayDuration: PLUGIN_CONFIG.displayDuration,
                     disableLog: PLUGIN_CONFIG.disableLog,
                     jsonDir: PLUGIN_CONFIG.jsonOutputPath,
                     openReportInBrowser: PLUGIN_CONFIG.openReportInBrowser,
