@@ -79,6 +79,7 @@ describe('validate plugin and all the options', () => {
                 const reportMergedJonOutput = path.resolve(`${reportPath}/merged-output.json`);
                 const reportEnrichedJsonOutput = path.resolve(`${reportPath}/enriched-output.json`);
                 const reportEnrichedJson = fs.readJsonSync(reportEnrichedJsonOutput);
+                const reportContent = fs.readFileSync(report, 'utf8');
 
                 // Check original JSON has been removed => `removeOriginalJsonReportFile = true`
                 expect(cucumberResults).not.toBeDefined();
@@ -117,6 +118,20 @@ describe('validate plugin and all the options', () => {
                     { label: 'Project', value: 'Custom project' },
                     { label: 'Release', value: '1.2.3' }
                 ]);
+
+                // Check that the customMetadata has been set
+                expect(reportEnrichedJson.customMetadata).toEqual(true);
+
+                // Check that the displayDuration has been set
+                expect(reportEnrichedJson.displayDuration).toEqual(true);
+
+                // Check that customStyle has been set
+                expect(reportContent).toContain('.custom');
+
+                // Check that overrideStyle has been set
+                expect(reportContent).toContain('.override');
+                // Check that default style has been overridden
+                expect(reportContent).not.toContain('.main_conainer');
 
             })
             .run();

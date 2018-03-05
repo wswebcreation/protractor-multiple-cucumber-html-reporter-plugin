@@ -84,7 +84,7 @@
     "complexity": [
       "error",
       {
-        "max": 15
+        "max": 20
       }
     ],
     "consistent-return": 0,

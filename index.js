@@ -10,12 +10,15 @@ const REPORT_FOLDER = 'report';
 const METADATA_KEY = 'metadata';
 const JSON_OUTPUT_FOLDER = 'json-output-folder';
 const PLUGIN_CONFIG = {
-    displayDuration: false,
     /**
      * multiple-cucumber-html-reporter specific options
      */
+    customMetadata: false,
+    customStyle: '',
     disableLog: false,
+    displayDuration: false,
     openReportInBrowser: false,
+    overrideStyle: '',
     reportPath: REPORT_FOLDER,
     saveCollectedJSON: false,
 
@@ -228,6 +231,7 @@ function postResults() {
                 }
 
                 const multiCucumberHTLMReporterConfig = {
+                    customMetadata: PLUGIN_CONFIG.customMetadata,
                     displayDuration: PLUGIN_CONFIG.displayDuration,
                     disableLog: PLUGIN_CONFIG.disableLog,
                     jsonDir: PLUGIN_CONFIG.jsonOutputPath,
@@ -248,6 +252,20 @@ function postResults() {
                  */
                 if (PLUGIN_CONFIG.customData) {
                     multiCucumberHTLMReporterConfig.customData = PLUGIN_CONFIG.customData;
+                }
+
+                /**
+                 * Add the custom css if needed
+                 */
+                if (PLUGIN_CONFIG.customStyle !== '') {
+                    multiCucumberHTLMReporterConfig.customStyle = PLUGIN_CONFIG.customStyle;
+                }
+
+                /**
+                 * Add the override css if needed
+                 */
+                if (PLUGIN_CONFIG.overrideStyle !== '') {
+                    multiCucumberHTLMReporterConfig.overrideStyle = PLUGIN_CONFIG.overrideStyle;
                 }
 
                 multiCucumberHTLMReporter.generate(multiCucumberHTLMReporterConfig);

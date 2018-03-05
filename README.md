@@ -123,6 +123,44 @@ customData: {
 
 > **THIS WILL ONLY WORK WITH `automaticallyGenerateReport:true`. IF YOU GENERATE THE REPORT LATER PLEASE LOOK AT [multiple-cucumber-html-reporter](https://github.com/wswebcreation/multiple-cucumber-html-reporter#usage)**
 
+### `customMetadata`
+- **Type:** `boolean`
+- **Mandatory:** No
+
+It is possible to provide custom metadata by setting this variable to `true`. Custom metadata will override the regular metadata completely and potentially have strange formatting bugs if too many (10+) variables are used.
+The columns will be in the order defined by the order of the list.
+
+Adding the metadata is done in the same way as with normal metadata. The metadata is formed as a list of key-value pairs to preserve order:
+
+```js
+metadata: [
+        {name: 'Environment v.', value: '12.3'},
+        {name: 'Plugin v.', value: '32.1'},
+        {name: 'Variable set', value: 'Foo'}
+    ]
+```
+
+### `customStyle`
+- **Type:** `path`
+- **Mandatory:** No
+
+If you need add some custom style to your report. Add it like this `customStyle: 'your-path-where/custom.css'`
+
+### `disableLog`
+- **Type:** `boolean`
+- **Mandatory:** No
+- **Default:** `false`
+
+This will disable the log so will **NOT** see this.
+
+```shell
+=====================================================================================================
+    Multiple Cucumber HTML report generated in:
+
+    /Users/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/.tmp/report/index.html
+=====================================================================================================
+```
+
 ### `displayDuration`
 - **Type:** `boolean`
 - **Mandatory:** No
@@ -143,21 +181,6 @@ The directory that will hold all the unique generated JSON files, relative from 
 
 If you **DON'T** provide this it will generate a `json-output-folder`-folder in the `path` that it defined the `cucumberOpts.format`.
 
-### `disableLog`
-- **Type:** `boolean`
-- **Mandatory:** No
-- **Default:** `false`
-
-This will disable the log so will **NOT** see this.
-
-```shell
-=====================================================================================================
-    Multiple Cucumber HTML report generated in:
-
-    /Users/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/.tmp/report/index.html
-=====================================================================================================
-```
-
 ### `metadataKey`
 - **Type:** `string`
 - **Default:** `metadata`
@@ -173,6 +196,12 @@ If for example all the metadata is already present in the `capabilities` but wit
 - **Mandatory:** No
 
 Settign this option will automatically open the generated report in the default browser of the operating system. See also [here](https://github.com/wswebcreation/multiple-cucumber-html-reporter#openreportinbrowser).
+
+### `overrideStyle`
+- **Type:** `path`
+- **Mandatory:** No
+
+If you need replace default style for your report. Add it like this `overrideStyle: 'your-path-where/custom.css'`
 
 ### `removeExistingJsonReportFile`
 - **Type:** `boolean`

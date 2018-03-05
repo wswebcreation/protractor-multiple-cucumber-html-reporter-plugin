@@ -39,7 +39,10 @@ config.plugins = [{
                 { label: 'Release', value: '1.2.3' }
             ]
         },
-        displayDuration: true
+        displayDuration: true,
+        customMetadata: true,
+        customStyle: path.join(__dirname, './../../css/custom.css'),
+        overrideStyle: path.join(__dirname, './../../css/override.css')
     }
 }];
 
