@@ -165,10 +165,18 @@ This will disable the log so will **NOT** see this.
 - **Type:** `boolean`
 - **Mandatory:** No
 
-If set to true the duration of steps, scenarios and features is displayed on the Features overview and single feature page in an easily readable format.
-This expects the durations in the report to be in milliseconds, which might result in incorrect durations when using a version of Cucumber that does not report in milliseconds (like v.1).
+If set to `true` the duration of steps, scenarios and features is displayed on the Features overview and single feature page in an easily readable format.
+This expects the durations in the report to be in **nanoseconds**, which might result in incorrect durations when using a version of Cucumber(JS 2 and 3) that does not report in nanoseconds but in milliseconds. This can be changed to milliseconds by adding the parameter `durationInMS: true`, see below
 
 > **NOTE: Only the duration of a feature can be shown in the features overview. A total duration over all features CAN NOT be given because the module doesn't know if all features have been run in parallel**
+
+### `durationInMS`
+- **Type:** `boolean`
+- **Default:** `false`
+- **Mandatory:** No
+
+If set to `true` the duration of steps will be expected to be in **milliseconds**, which might result in incorrect durations when using a version of Cucumber(JS 1 or 4) that does report in **nanaseconds**. 
+This parameter relies on `displayDuration: true`
 
 ### `jsonOutputPath`
 - **Type:** `string`

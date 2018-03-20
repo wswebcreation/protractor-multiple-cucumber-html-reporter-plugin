@@ -17,6 +17,7 @@ const PLUGIN_CONFIG = {
     customStyle: '',
     disableLog: false,
     displayDuration: false,
+    durationInMS: false,
     openReportInBrowser: false,
     overrideStyle: '',
     reportPath: REPORT_FOLDER,
@@ -233,6 +234,7 @@ function postResults() {
                 const multiCucumberHTLMReporterConfig = {
                     customMetadata: PLUGIN_CONFIG.customMetadata,
                     displayDuration: PLUGIN_CONFIG.displayDuration,
+                    durationInMS: PLUGIN_CONFIG.durationInMS,
                     disableLog: PLUGIN_CONFIG.disableLog,
                     jsonDir: PLUGIN_CONFIG.jsonOutputPath,
                     openReportInBrowser: PLUGIN_CONFIG.openReportInBrowser,
