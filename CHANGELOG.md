@@ -1,5 +1,12 @@
 # Changelog
 
+<a name="1.6.0"></a>
+## [1.6.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.5.0...v1.6.0) (2018-03-20)
+
+### Features
+
+* **feature:** add `durationInMS` option
+
 
 <a name="1.5.0"></a>
 ## [1.5.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.4.0...v1.5.0) (2018-03-05)
