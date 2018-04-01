@@ -304,6 +304,10 @@ See the metadata information [here](https://github.com/wswebcreation/multiple-cu
 
 > If you don't provide a `browser.name` or a `browser.version` the module will try to determine this automatically. The rest will be shown as questionmarks in the report
 
+## FAQ
+
+* **Multiple HTML files generated in the in `report/features`-folder, but they are not shown in the overview-page:** See the answer in issue [13](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/issues/13#issuecomment-377797176)
+
 ## Changelog
 The Changelog can be found [here](./CHANGELOG.md)
 
