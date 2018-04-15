@@ -32,6 +32,8 @@ config.plugins = [{
         removeOriginalJsonReportFile: true,
         saveCollectedJSON: true,
         reportName: 'You can adjust this report name',
+        pageFooter: '<div><p>A custom page footer</p></div>',
+        pageTitle: 'A custom page title',
         customData: {
             title: 'Run info',
             data: [

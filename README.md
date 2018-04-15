@@ -211,6 +211,19 @@ Settign this option will automatically open the generated report in the default 
 
 If you need replace default style for your report. Add it like this `overrideStyle: 'your-path-where/custom.css'`
 
+### `pageFooter`
+- **Type:** `string`
+- **Mandatory:** No
+
+You can customise Page Footer if required. You just need to provide a html string like `<div><p>A custom footer in html</p></div>`
+
+### `pageTitle`
+- **Type:** `string`
+- **Mandatory:** No
+- **Default:** Multiple Cucumber HTML Reporter
+
+You can change the report title in the HTML head Tag
+
 ### `removeExistingJsonReportFile`
 - **Type:** `boolean`
 - **Default:** `false`

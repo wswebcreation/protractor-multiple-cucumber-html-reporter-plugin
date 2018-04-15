@@ -20,6 +20,8 @@ const PLUGIN_CONFIG = {
     durationInMS: false,
     openReportInBrowser: false,
     overrideStyle: '',
+    pageFooter: false,
+    pageTitle: false,
     reportPath: REPORT_FOLDER,
     saveCollectedJSON: false,
 
@@ -243,13 +245,6 @@ function postResults() {
                 };
 
                 /**
-                 * Add the custom report name if needed
-                 */
-                if (PLUGIN_CONFIG.reportName) {
-                    multiCucumberHTLMReporterConfig.reportName = PLUGIN_CONFIG.reportName;
-                }
-
-                /**
                  * Add the custom data if needed
                  */
                 if (PLUGIN_CONFIG.customData) {
@@ -268,6 +263,27 @@ function postResults() {
                  */
                 if (PLUGIN_CONFIG.overrideStyle !== '') {
                     multiCucumberHTLMReporterConfig.overrideStyle = PLUGIN_CONFIG.overrideStyle;
+                }
+
+                /**
+                 * Add the pageFooter if needed
+                 */
+                if (PLUGIN_CONFIG.pageFooter) {
+                    multiCucumberHTLMReporterConfig.pageFooter = PLUGIN_CONFIG.pageFooter;
+                }
+
+                /**
+                 * Add the pageTitle if needed
+                 */
+                if (PLUGIN_CONFIG.pageTitle) {
+                    multiCucumberHTLMReporterConfig.pageTitle = PLUGIN_CONFIG.pageTitle;
+                }
+
+                /**
+                 * Add the custom report name if needed
+                 */
+                if (PLUGIN_CONFIG.reportName) {
+                    multiCucumberHTLMReporterConfig.reportName = PLUGIN_CONFIG.reportName;
                 }
 
                 multiCucumberHTLMReporter.generate(multiCucumberHTLMReporterConfig);
