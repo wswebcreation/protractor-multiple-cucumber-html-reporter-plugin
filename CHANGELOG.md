@@ -1,5 +1,12 @@
 # Changelog
 
+<a name="1.7.1"></a>
+## [1.7.1](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.7.0...v1.7.1) (2018-07-15)
+
+### fix
+
+* **fix:** update dependencies
+
 <a name="1.7.0"></a>
 ## [1.7.0](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.6.1...v1.7.0) (2018-04-15)
 
@@ -61,7 +68,7 @@
 
 ### Bug Fixes
 
-* **fix:** update (dev)-dependencies to latest and remove double 
+* **fix:** update (dev)-dependencies to latest and remove double
 
 <a name="1.2.3"></a>
 ## [1.2.3](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/compare/v1.2.2...v1.2.3) (2017-09-29)

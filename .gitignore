@@ -5,3 +5,4 @@ node_modules/
 reports/
 report-path/
 json-output-path/
+package-lock.json
