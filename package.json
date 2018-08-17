@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "fs-extra": "^3.0.1",
-    "multiple-cucumber-html-reporter": "^1.10.2"
+    "multiple-cucumber-html-reporter": "^1.11.0"
   }
 }
