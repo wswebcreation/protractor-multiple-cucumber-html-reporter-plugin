@@ -175,7 +175,7 @@ This expects the durations in the report to be in **nanoseconds**, which might r
 - **Default:** `false`
 - **Mandatory:** No
 
-If set to `true` the duration of steps will be expected to be in **milliseconds**, which might result in incorrect durations when using a version of Cucumber(JS 1 or 4) that does report in **nanaseconds**. 
+If set to `true` the duration of steps will be expected to be in **milliseconds**, which might result in incorrect durations when using a version of Cucumber(JS 1 or 4) that does report in **nanaseconds**.
 This parameter relies on `displayDuration: true`
 
 ### `jsonOutputPath`
@@ -321,8 +321,8 @@ See the metadata information [here](https://github.com/wswebcreation/multiple-cu
 
 * **Multiple HTML files generated in the in `report/features`-folder, but they are not shown in the overview-page:** See the answer in issue [13](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/issues/13#issuecomment-377797176)
 
-## Changelog
-The Changelog can be found [here](./CHANGELOG.md)
+## Changelog/Releases
+The Changelog/Releases can be found [here](https://github.com/wswebcreation/protractor-multiple-cucumber-html-reporter-plugin/releases)
 
 ## Contributing
 How to contribute can be found [here](./CONTRIBUTING.md)
