@@ -1,6 +1,6 @@
 {
   "name": "protractor-multiple-cucumber-html-reporter-plugin",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "A protractor plugin to use multiple-cucumber-html-reporter with CucumberJs 1, 2 or 3",
   "main": "index.js",
   "scripts": {
