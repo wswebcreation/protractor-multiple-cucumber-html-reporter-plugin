@@ -19,6 +19,8 @@
     "fdiscribe": true,
     "xit": true,
     "xdiscribe": true,
+    "After": true,
+    "Before": true,
     "Given": true,
     "When": true,
     "Then": true
@@ -238,6 +240,8 @@
       "error",
       {
         "capIsNewExceptions": [
+          "After",
+          "Before",
           "Given",
           "When",
           "Then"

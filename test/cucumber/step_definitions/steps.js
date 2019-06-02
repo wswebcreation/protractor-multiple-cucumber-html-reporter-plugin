@@ -1,4 +1,6 @@
-const { Given, When, Then } = require('cucumber');
+const { Before, Given, When, Then } = require('cucumber');
+
+// Before(() => Promise.reject('Error'));
 
 Given('I do something', () => Promise.resolve('I do something'));
 
