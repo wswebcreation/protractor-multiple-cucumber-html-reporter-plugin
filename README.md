@@ -6,6 +6,23 @@
 
 [![NPM](https://nodei.co/npm/protractor-multiple-cucumber-html-reporter-plugin.png)](https://nodei.co/npm/protractor-multiple-cucumber-html-reporter-plugin/)
 
+# Important News
+**Date: 16th of January 2016**
+
+**I will stop maintaining this module per the first of July 2020.** If you look at Protractor you can get the feeling that, in spite of all the effort that the Open Source Community is putting in it, it is not being maintained by Google anymore.
+To be honest, I'm pretty sure about it. If you look at the facts, see image below, you will notice that:
+- the amount of issues is increasing
+- the amount of PR's is increasing
+- the activity in the project is decreasing
+
+This is not giving me a good feeling. As a contributor to the Protractor project in the last years, I also have the feeling that there won't be a big chance that this is going to change.
+ 
+I'm not the only one who thinks about Protractor like this, please take a look at [this great article](https://dev.to/davert/5-reasons-you-should-not-use-protractor-in-2019-3l4b) which might also give you some insights.
+
+I want to thank all contributors for their help in the past 3-4 years and I feel blessed that I was able to help so many people over the last few years.
+
+![Protractor Support](./docs/images/protractor-support.jpg) 
+
 This plugin will connect [Protractor](https://www.npmjs.com/package/protractor), [CucumberJS](https://www.npmjs.com/package/cucumber) and [protractor-cucumber-framework](https://www.npmjs.com/package/protractor-cucumber-framework) to generate unique JSON files per feature with only a few lines of code.
 It will also replace the extra CucumberJS hook you needed to make in CucumberJS 1 and 2 to generate unique JSON report files.
 
