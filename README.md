@@ -7,7 +7,9 @@
 [![NPM](https://nodei.co/npm/protractor-multiple-cucumber-html-reporter-plugin.png)](https://nodei.co/npm/protractor-multiple-cucumber-html-reporter-plugin/)
 
 # Important News
-**Date: 16th of January 2016**
+**Date: 8th of May** I decided to stop maintaining this package per today and add the DEPRECATED status to all versions
+
+**Date: 16th of January 2020**
 
 **I will stop maintaining this module per the first of July 2020.** If you look at Protractor you can get the feeling that, in spite of all the effort that the Open Source Community is putting in it, it is not being maintained by Google anymore.
 To be honest, I'm pretty sure about it. If you look at the facts, see image below, you will notice that:
